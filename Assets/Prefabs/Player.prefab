@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 3312727407219035746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -275,7 +275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0268, y: 0.7445}
+  m_AnchoredPosition: {x: -0.0268, y: 1.25}
   m_SizeDelta: {x: 2.4372, y: 0.511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1007273438079110624
@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 3077979037496589911}
   - component: {fileID: 1180468838098727096}
   - component: {fileID: 5108576090002842102}
+  - component: {fileID: -2437411986908204603}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -412,3 +413,38 @@ MonoBehaviour:
   displayColorRenderer: {fileID: 9138865181193837450}
   displayName: Missing Name
   displayColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &-2437411986908204603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980753199103692007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a553cb17010b2403e8523b558bffbc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 3077979037496589911}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  bufferResetMultiplier: 3
+  changedDetection: 1
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
