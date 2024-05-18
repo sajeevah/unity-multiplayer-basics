@@ -352,7 +352,9 @@ GameObject:
   - component: {fileID: 3077979037496589911}
   - component: {fileID: 1180468838098727096}
   - component: {fileID: 5108576090002842102}
-  - component: {fileID: -2437411986908204603}
+  - component: {fileID: 6657810692581731037}
+  - component: {fileID: 1405481854565473652}
+  - component: {fileID: 4024965941896412480}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -413,7 +415,29 @@ MonoBehaviour:
   displayColorRenderer: {fileID: 9138865181193837450}
   displayName: Missing Name
   displayColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &-2437411986908204603
+--- !u!195 &6657810692581731037
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980753199103692007}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1405481854565473652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -422,7 +446,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6980753199103692007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a553cb17010b2403e8523b558bffbc14, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d4268a545fed4549ab5600c429185f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  agent: {fileID: 6657810692581731037}
+--- !u!114 &4024965941896412480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980753199103692007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncDirection: 1
@@ -443,8 +483,7 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
-  bufferResetMultiplier: 3
-  changedDetection: 1
-  positionSensitivity: 0.01
+  onlySyncOnChangeCorrectionMultiplier: 2
   rotationSensitivity: 0.01
-  scaleSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
